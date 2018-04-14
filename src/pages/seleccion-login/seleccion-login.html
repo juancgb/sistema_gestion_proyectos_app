@@ -1,15 +1,21 @@
 <ion-content>
 
-  <div class='box-container'>
+  <ion-row class="box-container">
+  
+    <ion-col col-12 text-center class="box-inner-vertical-align">
+  
+      <h1 class="text-color-red">SISTEMA DE GESTION DE PROYECTOS</h1>
 
-    <ion-list class='box-inner-vertical-align'>
-
-      <ion-item *ngFor='let button of tipoUsuarios'>
-        <button ion-button full large round color='danger' (tap)='goToSignOut(button.tipo)'>{{ button.descripcion }}</button>
-      </ion-item>
+      <ion-list>
       
-    </ion-list>
+        <ion-item *ngFor='let button of tipoUsuarios'>
+          <button ion-button full large round color='danger' (tap)='goToSignOut(button.tipo)'>{{ button.descripcion }}</button>
+        </ion-item>
+      
+      </ion-list>
 
-  </div>
+    </ion-col>
+
+  </ion-row>
 
 </ion-content>

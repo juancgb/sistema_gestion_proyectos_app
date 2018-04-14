@@ -30,7 +30,7 @@ export class SeleccionLoginPage {
   }
 
   public goToSignOut(tipo){
-    this.navCtrl.setRoot(LoginPage, { tipoUsuario: tipo });
+    this.navCtrl.push(LoginPage, { tipoUsuario: tipo });
   }
 
   private isLogged() {

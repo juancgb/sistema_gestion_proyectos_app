@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 /** Paginas */
-import { SeleccionLoginPage } from '../seleccion-login/seleccion-login';
 import { HomeEstudiantePage } from '../home-estudiante/home-estudiante';
 import { HomeDocentePage } from '../home-docente/home-docente';
 
@@ -89,6 +88,6 @@ export class LoginPage {
   }
 
   public goBack(){
-    this.navCtrl.setRoot(SeleccionLoginPage);
+    this.navCtrl.pop();
   }
 }

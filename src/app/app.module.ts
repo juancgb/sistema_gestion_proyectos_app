@@ -3,6 +3,8 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+/**Dependencias */
+import { ChartsModule } from 'ng2-charts';
 
 import { MyApp } from './app.component';
 /** Directivas */
@@ -30,6 +32,7 @@ import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
   imports: [
     BrowserModule,
     DirectivesModule,
+    ChartsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
