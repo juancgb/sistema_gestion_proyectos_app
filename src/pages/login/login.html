@@ -1,0 +1,33 @@
+<ion-content>
+
+    <ion-row class="box-container">
+
+      <ion-col col-12 text-center class="box-inner-vertical-align">
+        
+        <h1 class="text-color-red">SISTEMA DE GESTION DE PROYECTOS</h1>
+
+        <ion-list>
+          <form [formGroup]='loginForm' (ngSubmit)='signIn()'>
+    
+            <ion-item padding>
+              <ion-input type="text" placeholder="{{ labelsForm.usuario }}" formControlName='usuario'></ion-input>
+            </ion-item>
+          
+            <ion-item padding>
+              <ion-input type="password" placeholder="Contraseña" formControlName='password'></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <button ion-button full large round color='danger' type="submit">ingresar</button>
+              <div ion-button block large round outline color='danger' (tap)='goBack()'>atras</div>
+            </ion-item>
+            
+          </form>
+    
+        </ion-list>
+
+      </ion-col>
+
+    </ion-row>
+
+</ion-content>

@@ -1,16 +1,56 @@
-// http://ionicframework.com/docs/theming/
+/** INICIO CONTAINERS */
+.box-container {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.box-inner-vertical-align {
+    display: table-cell;
+    vertical-align: middle;
+}
+/** INICIO CONTAINERS */
 
+/** INICIO INPUTS */
+.item-inner {
+    border-bottom-color: transparent !important;
+    -webkit-box-shadow: inset 0 -1px 0 0 transparent !important;
+    box-shadow: inset 0 0px 0 0 transparent !important;
+}
+.item-input ion-input {
+    position: static;
+    border: 1px solid #f53d3d;
+    border-radius: 5px;
+    background-image: linear-gradient(#f53d3d14, #ffffff00);
+    box-shadow: inset 0 2px 3px #f53d3d57;
+}
+/** FIN INPUTS */
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+/** INICIO TOOLBAR */
+.toolbar-background-md {
+    border-color: #b2b2b2;
+    background: #f53d3d;
+}
+.toolbar-title-md {
+    font-weight: normal !important;
+    color: #ffffff !important;
+}
+.back-button-icon-md {
+    color: #fff !important;
+}
+/** FIN TOOLBAR */
+
+/** INICIO TEXTOS */
+.text-color-red {
+    color: #f53d3d !important;
+}
+.text-color-white {
+    color: #ffffff !important;
+}
+/** FIN TEXTOS */
+
+/** INICIO CARDS */
+.card-header-md {
+    font-weight: 500 !important;
+    color: #f53d3d !important;
+}
+/** INICIO CARDS */

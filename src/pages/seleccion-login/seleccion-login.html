@@ -1,0 +1,15 @@
+<ion-content>
+
+  <div class='box-container'>
+
+    <ion-list class='box-inner-vertical-align'>
+
+      <ion-item *ngFor='let button of tipoUsuarios'>
+        <button ion-button full large round color='danger' (tap)='goToSignOut(button.tipo)'>{{ button.descripcion }}</button>
+      </ion-item>
+      
+    </ion-list>
+
+  </div>
+
+</ion-content>
