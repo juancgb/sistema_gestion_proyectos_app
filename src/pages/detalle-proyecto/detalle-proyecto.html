@@ -1,0 +1,83 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ proyecto.proyectoNombre }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="contacts" class="text-color-red"></ion-icon>&nbsp;
+      Integrantes:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor='let estudiante of proyecto.proyectoIntegrantes'>
+          <ion-icon name="contact" class="text-color-red"></ion-icon>&nbsp;
+          {{ estudiante.codigo }}&nbsp;-&nbsp;{{ estudiante.nombre }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="time" class="text-color-red"></ion-icon>&nbsp;
+      Ultima actualizacion:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          {{ proyecto.proyectoFechaActualizacion | amTimeAgo }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="stats" class="text-color-red"></ion-icon>&nbsp;
+      Progreso del proyecto:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-list-header class="text-color-red">
+          <ion-icon name="trending-up" class="text-color-red"></ion-icon>&nbsp;
+          Nivel del proyecto:
+        </ion-list-header>
+        <ion-item>
+          {{ proyecto.proyectoNivel.nombre }}
+        </ion-item>
+        <ion-list-header class="text-color-red">
+          <ion-icon name="speedometer" class="text-color-red"></ion-icon>&nbsp;
+          Progreso general del proyecto:
+        </ion-list-header>
+        <ion-item>
+          <canvas class="chart chart-base" baseChart
+          [data]='proyectoProgreso.data'
+          [labels]='proyectoProgreso.labels'
+          [chartType]='proyectoProgreso.type'
+          [options]='proyectoProgreso.options'></canvas>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="time" class="text-color-red"></ion-icon>&nbsp;
+      Fecha creacion:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          {{ proyecto.proyectoFechaCreacion | formatoFecha }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

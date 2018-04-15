@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 /**Dependencias */
 import { ChartsModule } from 'ng2-charts';
+import { MomentModule } from 'angular2-moment/moment.module';
 
 import { MyApp } from './app.component';
 /** Directivas */
@@ -17,6 +18,8 @@ import { HomeDocentePage } from '../pages/home-docente/home-docente';
 import { HomeEstudiantePage } from '../pages/home-estudiante/home-estudiante';
 import { MenuPage } from '../pages/menu/menu';
 import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
+import { DetalleProyectoPage } from '../pages/detalle-proyecto/detalle-proyecto';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
     LoginPage,
     HomeDocentePage,
     HomeEstudiantePage,
+    DetalleProyectoPage,
     MenuPage,
     NotificacionesPage
   ],
@@ -33,6 +37,8 @@ import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
     BrowserModule,
     DirectivesModule,
     ChartsModule,
+    MomentModule,
+    PipesModule.forRoot(),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -43,6 +49,7 @@ import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
     LoginPage,
     HomeDocentePage,
     HomeEstudiantePage,
+    DetalleProyectoPage,
     MenuPage,
     NotificacionesPage
   ],

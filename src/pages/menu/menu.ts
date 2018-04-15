@@ -15,6 +15,19 @@ export class MenuPage {
   ionViewDidLoad() {
   }
 
+  public tipoUsuarioLogueado(): string {
+    let tipo: string = 'Usuario';
+    switch (parseInt(localStorage.getItem('tipoUsuario'))) {
+      case 0:
+        tipo = 'Estudiante';
+        break;
+      case 1:
+        tipo = 'Docente'
+        break;
+    }
+    return tipo;
+  }
+
   public signOut() {
     localStorage.clear();
     this.navCtrl.setRoot(SeleccionLoginPage);

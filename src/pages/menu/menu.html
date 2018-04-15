@@ -9,6 +9,10 @@
 
 <ion-content padding>
   <ion-list>
+    <ion-item>
+      <ion-icon name="contact" item-start class='text-color-red'></ion-icon>
+      {{ tipoUsuarioLogueado() }}
+    </ion-item>
     <ion-item (tap)='signOut()'>
       Cerrar sesion
       <ion-icon name="log-out" item-end class='text-color-red'></ion-icon>

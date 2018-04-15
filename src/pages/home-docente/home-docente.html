@@ -4,11 +4,11 @@
 
     <ion-buttons left>
       <button ion-button icon-only abrir-menu>
-        <ion-icon name="contact" class="text-color-white"></ion-icon>
+        <ion-icon name="menu" class="text-color-white"></ion-icon>
       </button>
     </ion-buttons>
 
-    <ion-title>Docente</ion-title>
+    <ion-title>Proyectos</ion-title>
 
     <ion-buttons end>
       <button ion-button icon-only abrir-notificacionces>
@@ -22,6 +22,44 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+  <ion-card *ngFor='let proyecto of proyectos' (tap)='goToProject(proyecto)'>
+    <ion-card-header>
+      <ion-icon name="folder" class="text-color-red"></ion-icon>&nbsp;
+      {{ proyecto.proyectoNombre }}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-list-header class="text-color-red">
+          <ion-icon name="contacts" class="text-color-red"></ion-icon>&nbsp;
+          Integrantes:
+        </ion-list-header>
+        <ion-item *ngFor='let estudiante of proyecto.proyectoIntegrantes'>
+          {{ estudiante.codigo }}&nbsp;-&nbsp;{{ estudiante.nombre }}
+        </ion-item>
+        <ion-list-header class="text-color-red">
+          <ion-icon name="stats" class="text-color-red"></ion-icon>&nbsp;
+          Nivel del proyecto:
+        </ion-list-header>
+        <ion-item>
+           {{ proyecto.proyectoNivel.nombre }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    <ion-row padding>
+      <ion-col>
+        <ion-item>
+          <ion-icon name="timer" class="text-color-red"></ion-icon>&nbsp;
+          {{ proyecto.proyectoFechaActualizacion | amTimeAgo }}
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item text-right class="text-color-red">
+          <ion-icon name="open"></ion-icon>&nbsp;
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 
 </ion-content>
