@@ -13,6 +13,10 @@
       <ion-icon name="contact" item-start class='text-color-red'></ion-icon>
       {{ tipoUsuarioLogueado() }}
     </ion-item>
+    <ion-item *ngFor="let pagina of modulos" (tap)="goToComponent(pagina)">
+      <ion-icon name="{{ pagina.icon }}" item-end class='text-color-red'></ion-icon>
+      {{ pagina.label }}
+    </ion-item>
     <ion-item (tap)='signOut()'>
       Cerrar sesion
       <ion-icon name="log-out" item-end class='text-color-red'></ion-icon>

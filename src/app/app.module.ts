@@ -10,6 +10,7 @@ import { MomentModule } from 'angular2-moment/moment.module';
 import { MyApp } from './app.component';
 /** Directivas */
 import { DirectivesModule } from '../directives/directives.module';
+import { PipesModule } from '../pipes/pipes.module';
 /** Paginas */
 import { HomePage } from '../pages/home/home';
 import { SeleccionLoginPage } from '../pages/seleccion-login/seleccion-login';
@@ -19,7 +20,7 @@ import { HomeEstudiantePage } from '../pages/home-estudiante/home-estudiante';
 import { MenuPage } from '../pages/menu/menu';
 import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
 import { DetalleProyectoPage } from '../pages/detalle-proyecto/detalle-proyecto';
-import { PipesModule } from '../pipes/pipes.module';
+import { ProcesosPage } from '../pages/procesos/procesos';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PipesModule } from '../pipes/pipes.module';
     HomeEstudiantePage,
     DetalleProyectoPage,
     MenuPage,
-    NotificacionesPage
+    NotificacionesPage,
+    ProcesosPage
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { PipesModule } from '../pipes/pipes.module';
     HomeEstudiantePage,
     DetalleProyectoPage,
     MenuPage,
-    NotificacionesPage
+    NotificacionesPage,
+    ProcesosPage
   ],
   providers: [
     StatusBar,
