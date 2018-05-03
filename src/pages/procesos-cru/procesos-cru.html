@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title [hidden]="!nuevo">Nuevo proceso</ion-title>
+    <ion-title *ngIf="!nuevo">{{ proceso.descripcion }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-content>
+      <form>
+        <ion-list>
+          <ion-list-header class="text-color-red">
+            <ion-icon name="quote" class="text-color-red"></ion-icon>&nbsp; 
+            Descripcion:
+          </ion-list-header>
+          
+          <ion-item>
+            <ion-input type="text" placeholder="Descripcion" [(ngModel)]="proceso.descripcion" name="descripcion"></ion-input>
+          </ion-item>
+          <br>
+          
+          <ion-list-header class="text-color-red">
+            <ion-icon name="stats" class="text-color-red"></ion-icon>&nbsp;
+            Niveles:
+            <ion-icon item-end name="add" class="text-color-red"></ion-icon>&nbsp;
+          </ion-list-header>
+          <div *ngIf="proceso.niveles.length === 0;then sinniveles else conniveles"></div>
+          <ng-template #sinniveles>
+            <ion-item>
+              Todavia no hay niveles!
+            </ion-item>
+          </ng-template>
+          <ng-template #conniveles>
+            <ion-item *ngFor="let nivel of porceso.niveles" (tap)="abrirNivel(nivel)">
+              {{ nivel.nombre }}
+              <ion-icon name="open" item-end class='text-color-red'></ion-icon>
+            </ion-item>
+          </ng-template>
+          <button ion-button full medium round color="danger" (tap)="nuevoNivel()">
+            <ion-icon name="open"></ion-icon>&nbsp;
+            Añadir un nivel
+          </button>
+          
+        </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

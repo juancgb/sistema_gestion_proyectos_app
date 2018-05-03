@@ -48,7 +48,7 @@ export class LoginPage {
     }
   }
 
-  public signIn() {
+  public signIn(): void {
     let credenciales = this.loginForm.value;
     
     let posibleError = 0;

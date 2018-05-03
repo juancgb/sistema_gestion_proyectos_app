@@ -8,7 +8,7 @@ import { DetalleProyectoPage } from '../detalle-proyecto/detalle-proyecto';
 })
 export class HomeDocentePage {
 
-  private proyectos: Array<any>;
+  public proyectos: Array<any>;
 
   constructor(
     public navCtrl: NavController,

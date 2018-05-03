@@ -21,6 +21,8 @@ import { MenuPage } from '../pages/menu/menu';
 import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
 import { DetalleProyectoPage } from '../pages/detalle-proyecto/detalle-proyecto';
 import { ProcesosPage } from '../pages/procesos/procesos';
+import { ProcesosCruPage } from '../pages/procesos-cru/procesos-cru';
+import { NivelesCrudPage } from '../pages/niveles-crud/niveles-crud';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ProcesosPage } from '../pages/procesos/procesos';
     DetalleProyectoPage,
     MenuPage,
     NotificacionesPage,
-    ProcesosPage
+    ProcesosPage,
+    ProcesosCruPage,
+    NivelesCrudPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,9 @@ import { ProcesosPage } from '../pages/procesos/procesos';
     DetalleProyectoPage,
     MenuPage,
     NotificacionesPage,
-    ProcesosPage
+    ProcesosPage,
+    ProcesosCruPage,
+    NivelesCrudPage
   ],
   providers: [
     StatusBar,

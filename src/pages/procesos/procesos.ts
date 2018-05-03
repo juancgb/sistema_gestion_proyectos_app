@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ProcesosPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+/** Constantes */
+import { Constantes } from '../../constants/constantes';
+/** Interfaces */
+import { Proceso } from '../../interfaces/procesos/proceso';
+/** Paginas */
+import { ProcesosCruPage } from '../procesos-cru/procesos-cru';
 
 @Component({
   selector: 'page-procesos',
@@ -18,7 +17,22 @@ export class ProcesosPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProcesosPage');
+  }
+
+  public verProceso(proceso: Proceso): void {
+    let pathParam: any = {};
+    pathParam[Constantes.NUEVO] = false;
+    pathParam[Constantes.PROCESO_PARAM] = proceso;
+
+    this.navCtrl.push(ProcesosCruPage, pathParam);
+  }
+
+  public nuevoProceso(): void {
+    let pathParam: any = {};
+    pathParam[Constantes.NUEVO] = true;
+    pathParam[Constantes.PROCESO_PARAM] = null;
+
+    this.navCtrl.push(ProcesosCruPage, pathParam);
   }
 
 }

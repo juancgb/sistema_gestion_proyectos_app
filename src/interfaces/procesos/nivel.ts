@@ -1,4 +1,4 @@
-import { Actividad } from './actividades';
+import { Actividad } from './actividad';
 
 export interface Nivel {
     id: number;
