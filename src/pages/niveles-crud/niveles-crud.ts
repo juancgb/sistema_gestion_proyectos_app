@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'page-niveles-cru',
-  templateUrl: 'niveles-cru.html',
+  selector: 'page-niveles-crud',
+  templateUrl: 'niveles-crud.html',
 })
 export class NivelesCrudPage {
 
